@@ -315,6 +315,70 @@
       font-size: 0.9rem;
     }
 
+    .reactiva-gallery {
+      margin-top: 42px;
+      padding-top: 34px;
+      border-top: 1px solid var(--border);
+    }
+
+    .reactiva-gallery h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .gallery-intro {
+      color: var(--muted);
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-card {
+      margin: 0;
+      background: rgba(8, 15, 28, 0.55);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .gallery-card:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(77, 163, 255, 0.38);
+    }
+
+    .gallery-card a {
+      display: block;
+      background: #f3f4f6;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-card figcaption {
+      padding: 18px 20px 20px;
+      color: var(--muted);
+    }
+
+    .gallery-card figcaption strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.04rem;
+      margin-bottom: 4px;
+    }
+
     .stack {
       display: flex;
       flex-wrap: wrap;
@@ -386,8 +450,13 @@
 
       .about-grid,
       .case-grid,
-      .journey {
+      .journey,
+      .gallery-grid {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-card:first-child {
+        grid-column: auto;
       }
 
       .results {
@@ -639,6 +708,76 @@
             <div class="result">
               <strong>Sobresaliente</strong>
               <span>resultado de la defensa final</span>
+            </div>
+
+          </div>
+
+          <div class="reactiva-gallery">
+
+            <h3>Evidencia visual del proyecto</h3>
+
+            <p class="gallery-intro">
+              Tres vistas del dashboard final muestran cómo ReActiva conecta
+              análisis de negocio, operación de campañas y monitoreo técnico.
+              Hacé clic en cualquier imagen para verla en tamaño completo.
+            </p>
+
+            <div class="gallery-grid">
+
+              <figure class="gallery-card">
+                <a
+                  href="assets/img/reactiva/resumen-ejecutivo.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/img/reactiva/resumen-ejecutivo.png"
+                    alt="Dashboard Resumen Ejecutivo de ReActiva con KPIs, evolución de transacciones, categorías, canales y calidad de datos"
+                    loading="lazy"
+                  >
+                </a>
+                <figcaption>
+                  <strong>Resumen Ejecutivo</strong>
+                  KPIs generales, evolución mensual, categorías, canales y controles de calidad de datos.
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-card">
+                <a
+                  href="assets/img/reactiva/reactivacion-campanas.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/img/reactiva/reactivacion-campanas.png"
+                    alt="Dashboard de Reactivación y Campañas de ReActiva con clientes objetivo, programación, recomendaciones y cupones"
+                    loading="lazy"
+                  >
+                </a>
+                <figcaption>
+                  <strong>Reactivación y Campañas</strong>
+                  Seguimiento operativo de clientes inactivos, recomendaciones, envíos, cupones y reactivación.
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-card">
+                <a
+                  href="assets/img/reactiva/monitoreo-data-drift.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/img/reactiva/monitoreo-data-drift.png"
+                    alt="Dashboard de monitoreo de Data Drift de ReActiva con Evidently"
+                    loading="lazy"
+                  >
+                </a>
+                <figcaption>
+                  <strong>Monitoreo de Data Drift — Evidently</strong>
+                  Estado del monitoreo, features con drift, métodos de comparación y evolución del desvío.
+                </figcaption>
+              </figure>
+
             </div>
 
           </div>
